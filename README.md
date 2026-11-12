@@ -58,3 +58,4 @@ npm run build
 Barcha ma'lumotlar bir joyda — `src/data/portfolioData.js` faylida saqlanadi. 
 Siz o'z ismingiz, kasbingiz, loyihalaringiz, ko'nikmalaringiz va ijtimoiy tarmoq manzillaringizni shu bitta fayl orqali osonlik bilan o'zgartira olasiz!
 
+# partfolyia
