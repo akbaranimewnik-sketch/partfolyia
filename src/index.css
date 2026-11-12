@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #1b1f27;
+    color: #e2e8f0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #1b1f27;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #282f3b;
+    border-radius: 6px;
+    box-shadow: inset 2px 2px 4px rgba(13, 16, 21, 0.6), inset -2px -2px 4px rgba(45, 54, 69, 0.3);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #333c4b;
+  }
+}
+
+/* === NEUMORPHISM (SOFT UI) SYSTEM === */
+/* Asosiy fon: #1b1f27 */
+/* Qorong'i soya: #101318 yoki rgba(13, 16, 21, 0.85) */
+/* Yorug' nur: #262c38 yoki rgba(55, 66, 85, 0.45) */
+
+/* Bo'rtib chiqqan tekis karta (Flat extrusion) */
+.neu-flat {
+  background: #1b1f27;
+  box-shadow: 8px 8px 18px rgba(11, 14, 18, 0.75), -8px -8px 18px rgba(46, 56, 72, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Kichikroq bo'rtiq karta */
+.neu-flat-sm {
+  background: #1b1f27;
+  box-shadow: 5px 5px 12px rgba(11, 14, 18, 0.7), -5px -5px 12px rgba(46, 56, 72, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Katta bo'rtiq karta */
+.neu-flat-lg {
+  background: #1b1f27;
+  box-shadow: 12px 12px 28px rgba(10, 13, 17, 0.85), -12px -12px 28px rgba(46, 56, 72, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Ichkariga botgan (Pressed / Inset) */
+.neu-inset {
+  background: #1b1f27;
+  box-shadow: inset 5px 5px 10px rgba(11, 14, 18, 0.8), inset -5px -5px 10px rgba(46, 56, 72, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.neu-inset-sm {
+  background: #1b1f27;
+  box-shadow: inset 3px 3px 6px rgba(11, 14, 18, 0.8), inset -3px -3px 6px rgba(46, 56, 72, 0.3);
+}
+
+/* Interaktiv Neumorphic Tugma (Boshlang'ichda bo'rtiq, hoverda yengil nur, active/click bo'lganda ichkariga botadi) */
+.neu-btn {
+  background: #1b1f27;
+  box-shadow: 6px 6px 14px rgba(11, 14, 18, 0.75), -6px -6px 14px rgba(46, 56, 72, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.neu-btn:hover {
+  box-shadow: 8px 8px 18px rgba(11, 14, 18, 0.85), -8px -8px 18px rgba(56, 68, 88, 0.45);
+  transform: translateY(-1px);
+}
+.neu-btn:active, .neu-btn-active {
+  box-shadow: inset 4px 4px 8px rgba(11, 14, 18, 0.85), inset -4px -4px 8px rgba(46, 56, 72, 0.4) !important;
+  transform: translateY(1px);
+}
+
+/* Dumaloq tugmalar uchun */
+.neu-circle {
+  background: #1b1f27;
+  border-radius: 9999px;
+  box-shadow: 6px 6px 12px rgba(11, 14, 18, 0.75), -6px -6px 12px rgba(46, 56, 72, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: all 0.25s ease;
+}
+.neu-circle:hover {
+  box-shadow: 8px 8px 16px rgba(11, 14, 18, 0.85), -8px -8px 16px rgba(56, 68, 88, 0.45);
+  transform: scale(1.05);
+}
+.neu-circle:active {
+  box-shadow: inset 4px 4px 8px rgba(11, 14, 18, 0.85), inset -4px -4px 8px rgba(46, 56, 72, 0.4);
+  transform: scale(0.98);
+}
+
+/* Rangli aktsentli Neumorphic tugma */
+.neu-btn-primary {
+  background: linear-gradient(135deg, #0ea5e9, #4f46e5);
+  box-shadow: 6px 6px 16px rgba(11, 14, 18, 0.8), -6px -6px 16px rgba(46, 56, 72, 0.3), inset 1px 1px 2px rgba(255, 255, 255, 0.3);
+  transition: all 0.25s ease;
+}
+.neu-btn-primary:hover {
+  box-shadow: 8px 8px 20px rgba(14, 165, 233, 0.35), -6px -6px 16px rgba(46, 56, 72, 0.4);
+  transform: translateY(-1px);
+}
+.neu-btn-primary:active {
+  box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.5), inset -2px -2px 5px rgba(255, 255, 255, 0.2);
+  transform: translateY(1px);
+}
+
+/* Gradient matn */
+.gradient-text {
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
